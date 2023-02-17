@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
+import { PostsListComponent } from './components/posts-list/posts-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostCardComponent
+    PostCardComponent,
+    PostsListComponent
   ],
   imports: [
     BrowserModule,
