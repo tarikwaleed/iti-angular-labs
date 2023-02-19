@@ -1,0 +1,26 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav class="mat-elevation-z10 col-3" mode="side" closed>
+        <h2>
+            Blogging App
+        </h2>
+        <ul>
+            <li><a href="#">Some link</a></li>
+            <li><a href="#">Some link</a></li>
+            <li><a href="#">Some link</a></li>
+            <li><a href="#">Some link</a></li>
+            <li><a href="#">Some link</a></li>
+            <li><a href="#">Some link</a></li>
+        </ul>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+        <mat-toolbar color="primary">
+            <button mat-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            Blogging App
+        </mat-toolbar>
+        <app-posts-list></app-posts-list>
+
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
