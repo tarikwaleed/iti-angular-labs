@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-2 m-2" *ngFor="let post of posts; index as i">
-            <app-post-card [post]="post"></app-post-card>
+            <app-post-card [id]="post.id"></app-post-card>
         </div>
         <!-- /.col-4 -->
     </div>

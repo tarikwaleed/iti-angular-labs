@@ -9,7 +9,7 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostsListComponent {
   posts: Post[]
-  constructor(postService:PostsService) {
+  constructor(postService: PostsService) {
     this.posts = postService.getAll()
   }
 
