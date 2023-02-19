@@ -11,11 +11,21 @@ export class PostCardComponent {
   post!: Post;
   @Input()
   id!: number;
+  color!: string
+  text!: string
   constructor(private postsService: PostsService) {
-
+    this.color = "primary"
+    this.text = "Follow"
   }
   ngOnInit(): void {
     this.post = this.postsService.getOne(this.id)
+  }
+  toggleFollow() {
+    this.post.creator.isFollowing = !(this.post.creator.isFollowing)
+    this.color = (this.color === "warn") ? "primary" : "warn"
+    this.text = (this.text === "Follow") ? "Unfollow" : "Follow"
+
+
   }
 
 

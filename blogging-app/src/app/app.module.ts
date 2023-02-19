@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatSidenavModule  } from "@angular/material/sidenav";
+import {MatFormFieldModule} from '@angular/material/form-field'
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {MatSidenavModule  } from "@angular/material/sidenav";
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,11 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-2 m-2" *ngFor="let post of posts; index as i">
-            <app-post-card [id]="post.id"></app-post-card>
+        <input #takeName (keyup)="getPostByName(takeName)" class="form-control" type="text" name="takeName"
+            id="takeName">
+    </div>
+    <div class="row">
+        <div class="col-2 m-2" *ngFor="let post of filteredArray; index as i">
+            <app-post-card [id]="post.id" ></app-post-card>
         </div>
         <!-- /.col-4 -->
     </div>
