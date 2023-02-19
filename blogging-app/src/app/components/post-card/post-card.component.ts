@@ -8,4 +8,7 @@ import { Post } from 'src/app/dtos/post';
 export class PostCardComponent {
   @Input()
   post!: Post;
+  @Input()
+  id!: number;
+
 }

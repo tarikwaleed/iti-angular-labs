@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import postsArray from "../../../assets/posts.json";
 import { Post } from "../../dtos/post";
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-posts-list',
@@ -9,8 +9,8 @@ import { Post } from "../../dtos/post";
 })
 export class PostsListComponent {
   posts: Post[]
-  constructor() {
-    this.posts = postsArray
+  constructor(postService:PostsService) {
+    this.posts = postService.getAll()
   }
 
 }
