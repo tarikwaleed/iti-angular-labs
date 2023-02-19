@@ -10,12 +10,21 @@ import { MatButtonModule } from "@angular/material/button";
 import { PostsListComponent } from './components/posts-list/posts-list.component';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
+import { HomeComponent } from './components/home/home.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import {MatSidenavModule  } from "@angular/material/sidenav";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PostCardComponent,
-    PostsListComponent
+    PostsListComponent,
+    HomeComponent,
+    SidenavComponent,
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -24,7 +33,8 @@ import { MatIconModule } from "@angular/material/icon";
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
