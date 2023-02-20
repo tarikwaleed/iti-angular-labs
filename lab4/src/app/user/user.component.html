@@ -1,0 +1,26 @@
+<form class="m-3" [formGroup]="newPostForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid">
+        <h3>New Post:</h3>
+
+
+        <div class="mb-3">
+            <label for="" class="form-label">Title</label>
+            <input type="text" formControlName="title" class="form-control" name="" id="" aria-describedby="helpId"
+                placeholder="">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Body</label>
+            <input type="text" formControlName="body" class="form-control" name="" id="" aria-describedby="helpId"
+                placeholder="">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary ">Create Post</button>
+
+    </div>
+    <!-- /.container -->
+</form>
+<app-post-card *ngFor="let post of posts" [body]="post.body" [title]="post.body"></app-post-card>

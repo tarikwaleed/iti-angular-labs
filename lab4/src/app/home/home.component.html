@@ -1,0 +1,8 @@
+<div class="conatainer-fluid">
+  <div *ngFor="let user of users" class="m-5">
+    <app-user-card [name]=user.name [username]=user.username [email]=user.email routerLink="/users/{{ user.id }}">
+    </app-user-card>
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.conatainer-fluid -->
