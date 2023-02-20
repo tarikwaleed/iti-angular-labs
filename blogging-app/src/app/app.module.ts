@@ -14,7 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatSidenavModule  } from "@angular/material/sidenav";
-import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { SearchBarComponent } from './components/search-bar/search-bar.component'
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'
     HomeComponent,
     SidenavComponent,
     FooterComponent,
+    SearchBarComponent,
     
   ],
   imports: [

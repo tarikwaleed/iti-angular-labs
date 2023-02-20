@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Post } from "../../dtos/post";
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -8,23 +8,17 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./posts-list.component.css']
 })
 export class PostsListComponent implements OnChanges {
-  posts: Post[]
+  posts!: Post[]
   filteredArray!: Post[];
-  constructor(postService: PostsService) {
+  @Input()
+  title!: string
+  constructor(private postService: PostsService) {
     this.posts = postService.getAll()
     this.filteredArray = this.posts;
+
   }
-  getPostByName(input: HTMLInputElement) {
-    this.filteredArray = this.posts.filter((p) => {
-      return p.title === input.value;
-    });
-    if (this.filteredArray.length <= 0) {
-      this.filteredArray = this.posts;
-    }
-    console.log(this.filteredArray);
-  }
-  ngOnChanges() {
-    this.filteredArray = this.posts;
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.title);
   }
 
 }
